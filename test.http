@@ -1,0 +1,43 @@
+GET http://localhost:3001/bukus
+###
+
+POST http://localhost:3001/buku
+Content-Type: application/json
+
+{
+    "name": "ui/ux",
+    "penulisId": 1
+}
+###
+
+POST http://localhost:3001/bukus
+Content-Type: application/json
+
+{
+    "data": [
+        {
+            "name": "pemrograman",
+            "penulisId": 1
+        },
+        {
+            "name": "ui/ux",
+            "penulisId": 1
+        },
+        {
+            "name": "database",
+            "penulisId": 1
+        }   
+    ]
+}
+###
+
+PUT http://localhost:3001/buku/2
+Content-Type: application/json
+
+{
+    "name": "pemrograman"
+}
+###
+
+DELETE http://localhost:3001/buku/2
+###
